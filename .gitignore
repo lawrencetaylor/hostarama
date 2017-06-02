@@ -1,0 +1,6 @@
+packages
+paket-files
+.fake
+.vs
+.vscode
+.paket/paket.exe

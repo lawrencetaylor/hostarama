@@ -1,0 +1,6 @@
+source https://www.nuget.org/api/v2
+
+nuget Fake
+nuget FSharp.Compiler.Service
+
+gist lawrencetaylor/83d214421c9c6abcbf9bbecb727b4a26 FsiSessionBuilder.fsx
