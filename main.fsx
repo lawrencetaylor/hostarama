@@ -34,7 +34,8 @@ Target "Run" (fun () ->
       |> List.iter(
           fun (label, hostEntries) -> 
             sw.WriteLine(sprintf "# %s" label)
-            hostEntries |> List.iter(fun (ip, host) -> sw.WriteLine(sprintf "%s    %s" ip host)))
+            hostEntries |> List.iter(fun (ip, host) -> sw.WriteLine(sprintf "%s    %s" ip host))
+            sw.WriteLine())
     | Failure message -> 
       traceError message
 )
