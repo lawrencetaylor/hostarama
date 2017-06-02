@@ -48,3 +48,18 @@ is written to the hosts file as
 ```
 
 Defining the hosts file entries defined in F# means you can use use F# expressions within the definition of the entries to increase the maintainability of these configurations.
+
+
+## Runtime parameters
+
+ `main.cmd` supports the following parameters:
+
+* __envDir__: The directory containing the .fsx files with the various configurations for the different environments.  Useful for when it may not be practical to have your environments defined within this repository - perhaps you want to source control your environments independently of these scripts.
+
+* __env__: The environment configuration you wish to run.
+
+e.g. Suppose the directory `C:\Users\ltaylor\Documents\HostEntryManagement\environments` contained a file `dev.fsx` specifying a hosts file configuration.  Then I could run the following to configure the hosts file:
+
+```
+main envDir=C:\Users\ltaylor\Documents\HostEntryManagement\environments env=dev
+```
